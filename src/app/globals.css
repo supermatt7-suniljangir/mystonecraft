@@ -6,6 +6,7 @@
   background-image: url("../assets/bg.jpeg") !important;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 
 body {
@@ -14,6 +15,16 @@ body {
   font-weight: 500;
   font-style: normal;
 }
+/* For WebKit browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none; /* Disable scrollbar for Firefox */
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

@@ -3,6 +3,7 @@ import React from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/layout/navbar/Navbar";
+import Footer from "../components/layout/others/Footer";
 
 // Initialize Inter font
 const inter = Inter({
@@ -23,12 +24,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         // Method 1: Apply directly to body
-        className={`${inter.className} antialiased`}
+        className={`${inter.className} antialiased relative`}
         // OR Method 2: Use as a CSS variable
         // className={`${inter.variable} font-sans antialiased`}
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

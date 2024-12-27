@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -16,12 +16,37 @@ import {
   AccordionTrigger,
 } from "../../../components/ui/accordion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navbarRef = useRef(null); // Reference for the navbar
+  const currentPath = usePathname();
+
+  // Close the menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+  
+  useEffect(() => {
+    setIsOpen(false); 
+  
+  }, [currentPath]);
 
   return (
-    <nav className="w-full bg-transparent absolute top-0 left-0 text-background z-50 px-4 py-1 shadow-2xl">
+    <nav
+      ref={navbarRef}
+      className="w-full bg-transparent absolute top-0 left-0 text-background z-50 px-4 py-1 shadow-2xl"
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-14 text-background">
           <Link href="/" className="text-xl font-semibold">
@@ -96,7 +121,6 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden border-t bg-primary">
