@@ -17,7 +17,7 @@ const Footer = () => {
                   className="object-contain"
                 />
               </div>
-              <h2 className="text-xl font-medium">company name</h2>
+              <h2 className="text-xl font-medium">Global Stone Art</h2>
             </div>
             <p className="text-gray-400 text-sm">
               Lorem Ipsum is simply dummy text of the printing and typesetting

@@ -50,7 +50,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-14 text-background">
           <Link href="/" className="text-xl font-semibold">
-            MyStoneCraft
+            Global Stone Art
           </Link>
 
           {/* Desktop Navigation */}

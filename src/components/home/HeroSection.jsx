@@ -4,7 +4,7 @@ import { Card, CardContent } from "../ui/card";
 import { Milestone, Phone } from "lucide-react";
 const HeroSection = () => {
   return (
-    <div className="relative h-[100dvh] w-full overflow-hidden text-primary-foreground">
+    <div className="relative h-screen w-full overflow-hidden text-primary-foreground">
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat backgroundImg" />
       <div className="absolute inset-0 bg-black/55" />
 

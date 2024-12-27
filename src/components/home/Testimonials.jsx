@@ -42,7 +42,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="w-full max-w-sm h-auto">
               <CardContent className="h-full pt-6 flex flex-col justify-between">
-                <div className="flex flex-col items-center gap-4">
+                <div className="flex flex-col items-center gap-2">
                   <div className="w-16 h-16 overflow-hidden rounded-full relative">
                     <Image
                       fill
