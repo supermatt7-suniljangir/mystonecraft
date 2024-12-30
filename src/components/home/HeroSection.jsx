@@ -21,28 +21,28 @@ const HeroSection = () => {
             </h2>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
+              className="flex-grow"
               target="_blank"
               href={`https://www.google.com/maps?ll=17.420017,78.229036&z=16&t=m&hl=en&gl=US&mapclient=embed&cid=5709170577501979575`}
             >
               <Button
                 variant="secondary"
-                className="bg-black/40 rounded-none text-background hover:text-primary"
+                className="bg-black/50  w-32 rounded-none text-background hover:text-primary"
               >
                 <Milestone /> Locate Us
               </Button>
             </Link>
-
-            <Link href="tel:+919999999999">
+            <a href="tel:+919999999999" className="block">
               <Button
                 variant="secondary"
-                className="bg-black/40 rounded-none text-background hover:text-primary"
+                className="bg-black/50 w-32 rounded-none text-background hover:text-primary"
               >
                 <Phone className=" h-2 w-2" />
                 Call Us
               </Button>
-            </Link>
+            </a>
           </div>
         </CardContent>
       </Card>

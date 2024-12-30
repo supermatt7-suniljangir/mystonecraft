@@ -17,17 +17,18 @@ const ContactCards = () => {
             We are available 24/7 to answer your queries and provide you with
             the best service.
           </p>
-
-          <Link href={`tel`} className="mx-auto text-center mb-4 block">
+          <div className="mb-4">
             <p className="text-sm">Call Now</p>
-            <Link href="tel:+919999999999" className="font-semibold text-lg">
+            <a href="tel:+919999999999" className="font-semibold text-lg">
               +919999999999
-            </Link>
-          </Link>
+            </a>
+          </div>
 
-          <Button variant="default" className="w-full">
-            <Link href="tel:+919999999999">Call Now</Link>
-          </Button>
+          <a href="tel:+919999999999">
+            <Button variant="default" className="w-full">
+              Call Now
+            </Button>
+          </a>
         </CardContent>
       </Card>
 
