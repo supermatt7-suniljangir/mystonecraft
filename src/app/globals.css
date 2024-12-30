@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.backgroundImg {
+.backgroundImgHome {
   background-image: url("../assets/bg.jpeg") !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+}
+.backgroundImgContact {
+  background-image: url("../assets/bg.jpeg") !important;
+}
+.backgroundImgTestimonials {
+  background-image: url("../assets/bg.jpeg") !important;
 }
 
 body {

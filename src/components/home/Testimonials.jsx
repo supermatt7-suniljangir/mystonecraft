@@ -23,17 +23,14 @@ const Testimonials = () => {
   ];
 
   return (
+    // check globals.css for the background image class
     <div className="relative min-h-[600px] w-full">
-      {/* Background Image */}
       <div
-        className="absolute inset-0 backgroundImg bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 backgroundImgTestimonials bg-cover bg-center bg-no-repeat"
         aria-hidden="true"
       />
-
-      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
 
-      {/* Content */}jjjj
       <div className="relative z-10 px-4 py-16 mx-auto max-w-7xl">
         <h2 className="mb-12 text-3xl font-bold text-center text-background">
           what they say

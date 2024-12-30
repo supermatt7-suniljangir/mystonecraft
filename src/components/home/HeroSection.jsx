@@ -4,8 +4,9 @@ import { Card, CardContent } from "../ui/card";
 import { Milestone, Phone } from "lucide-react";
 const HeroSection = () => {
   return (
+    // check globals.css for the background image class
     <div className="relative h-screen w-full overflow-hidden text-primary-foreground">
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat backgroundImg" />
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat backgroundImgHome" />
       <div className="absolute inset-0 bg-black/55" />
 
       <Card className="relative z-10 md:max-w-[60%] mx-auto mt-20 bg-transparent h-full  border-none shadow-none text-background">
