@@ -33,7 +33,7 @@ const Testimonials = () => {
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
 
-      {/* Content */}
+      {/* Content */}jjjj
       <div className="relative z-10 px-4 py-16 mx-auto max-w-7xl">
         <h2 className="mb-12 text-3xl font-bold text-center text-background">
           what they say

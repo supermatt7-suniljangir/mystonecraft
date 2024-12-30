@@ -45,16 +45,16 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className="w-full bg-transparent absolute top-0 left-0 text-background z-50 px-4 py-1 shadow-2xl"
+      className="w-full bg-transparent absolute top-0 left-0 text-background z-50 md:px-4 py-1 shadow-2xl"
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-14 text-background">
+      <div className="mx-auto w-full">
+        <div className="flex items-center justify-between h-14 text-background w-full px-4">
           <Link href="/" className="text-xl font-semibold">
             Global Stone Art
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden md:block">
+          <NavigationMenu className="hidden md:block w-full">
             <NavigationMenuList className="flex gap-8">
               <NavigationMenuItem>
                 <Link href={"/"} className=" flex items-center gap-2">
@@ -65,7 +65,7 @@ const Navbar = () => {
 
               {/* Dropdown Menu */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">
+                <NavigationMenuTrigger className="bg-transparent" >
                   Designs
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -123,7 +123,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden border-t bg-primary">
+          <div className="md:hidden w-full px-0 border-t bg-white text-foreground">
             <div className="flex flex-col w-full">
               <Link
                 className="flex items-center gap-2 p-4 w-full hover:bg-primary/10"

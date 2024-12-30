@@ -99,14 +99,14 @@ export default function CarouselUI() {
   }, []);
 
   return (
-    <div className="relative w-full sm:w-[95%] mx-auto my-8">
+    <div className="relative w-full mx-auto ">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex touch-pan-y">
           {" "}
           {/* Added touch-pan-y for better mobile handling */}
           {carouselItems.map((item) => (
-            <div key={item.id} className="flex-[0_0_100%] min-w-0 md:p-8">
-              <Card className="aspect-square md:aspect-auto md:h-[90vh]">
+            <div key={item.id} className="flex-[0_0_100%] md:p-4">
+              <Card className="aspect-square md:aspect-auto md:h-[95vh]">
                 <CardContent className="flex h-full w-full aspect-square relative">
                   <Image
                     src={item.image}
@@ -122,19 +122,19 @@ export default function CarouselUI() {
         </div>
       </div>
       <button
-        className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 items-center justify-center rounded-full bg-black/50 text-background hover:bg-black/70 transition-colors  flex"
+        className="absolute left-1 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 items-center justify-center rounded-full bg-black/50 text-background hover:bg-black/70 transition-colors  flex"
         onClick={scrollPrev}
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
-        className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 items-center justify-center rounded-full bg-black/50  text-background hover:bg-black/70 transition-colors  flex"
+        className="absolute right-1 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 items-center justify-center rounded-full bg-black/50  text-background hover:bg-black/70 transition-colors  flex"
         onClick={scrollNext}
       >
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-3 p-2 rounded-full">
+      <div className="absolute md:-bottom-4 left-1/2 -translate-x-1/2 flex gap-3 p-2 rounded-full">
         {carouselItems.map((_, index) => (
           <button
             key={index}
