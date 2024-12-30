@@ -18,11 +18,16 @@ const ContactCards = () => {
             the best service.
           </p>
 
-          <Link href="tel:+919999999999">
-            <Button variant="default" className="w-full">
-              Call Now
-            </Button>
+          <Link href={`tel`} className="mx-auto text-center mb-4 block">
+            <p className="text-sm">Call Now</p>
+            <Link href="tel:+919999999999" className="font-semibold text-lg">
+              +919999999999
+            </Link>
           </Link>
+
+          <Button variant="default" className="w-full">
+            <Link href="tel:+919999999999">Call Now</Link>
+          </Button>
         </CardContent>
       </Card>
 
