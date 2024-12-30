@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 import { Milestone, Phone } from "lucide-react";
+import Link from "next/link";
 const HeroSection = () => {
   return (
     // check globals.css for the background image class
@@ -21,19 +22,27 @@ const HeroSection = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              variant="secondary"
-              className="bg-black/40 rounded-none text-background hover:text-primary"
+            <Link
+              target="_blank"
+              href={`https://www.google.com/maps?ll=17.420017,78.229036&z=16&t=m&hl=en&gl=US&mapclient=embed&cid=5709170577501979575`}
             >
-              <Milestone /> Locate Us
-            </Button>
-            <Button
-              variant="secondary"
-              className="bg-black/40 rounded-none text-background hover:text-primary"
-            >
-              <Phone className=" h-2 w-2" />
-              +999999999
-            </Button>
+              <Button
+                variant="secondary"
+                className="bg-black/40 rounded-none text-background hover:text-primary"
+              >
+                <Milestone /> Locate Us
+              </Button>
+            </Link>
+
+            <Link href="tel:+919999999999">
+              <Button
+                variant="secondary"
+                className="bg-black/40 rounded-none text-background hover:text-primary"
+              >
+                <Phone className=" h-2 w-2" />
+                Call Us
+              </Button>
+            </Link>
           </div>
         </CardContent>
       </Card>

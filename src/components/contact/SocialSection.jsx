@@ -30,7 +30,7 @@ const socials = [
 ];
 const SocialSection = () => {
   return (
-    <div className="max-w-4xl mx-auto p-4">
+    <div className="w-full mx-auto p-2 md:px-4">
       <Card className="shadow-none border-none py-8">
         <CardHeader className="text-center">
           <CardTitle className="flex items-center justify-center gap-2 text-2xl">
@@ -41,15 +41,15 @@ const SocialSection = () => {
             and offers!
           </p>
         </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-2  lg:grid-cols-4 gap-4 ">
+        <CardContent className="flex justify-center items-center h-full w-full p-2">
+          <div className="flex w-full flex-wrap overflow-hidden gap-4 justify-center p-0">
             {socials.map((social) => {
               const IconComponent = social.icon;
               return (
                 <Button
                   key={social.name}
                   variant="outline"
-                  className={`w-full h-16 flex items-center justify-center gap-3 transition-all ${social.color} hover:text-background`}
+                  className={`w-2/5 md:w-[22%] h-16 flex items-center justify-center gap-3 transition-all ${social.color} hover:text-background`}
                 >
                   <IconComponent className="w-5 h-5" />
                   <div className="flex flex-col items-start">

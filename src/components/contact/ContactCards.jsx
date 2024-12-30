@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin } from "lucide-react";
-
+import Link from "next/link";
 const ContactCards = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:w-5/6 md:w-full lg:w-3/4  mx-auto p-4 -mt-16 z-50 relative">
@@ -14,25 +14,15 @@ const ContactCards = () => {
         </CardHeader>
         <CardContent className="text-center">
           <p className="mb-4">
-            feel free to call us anytime from 10:00 AM - 6:00PM, monday to
-            saturday
+            We are available 24/7 to answer your queries and provide you with
+            the best service.
           </p>
 
-          <div className="flex mb-4 justify-around">
-            <div>
-              <p className="text-sm">For Other Info</p>
-              <p className="font-semibold text-lg">+919999999999</p>
-            </div>
-
-            <div>
-              <p className="text-sm">For Inquiring</p>
-              <p className="font-semibold text-lg">+919999999999</p>
-            </div>
-          </div>
-
-          <Button variant="default" className="w-full">
-            Book an appointment
-          </Button>
+          <Link href="tel:+919999999999">
+            <Button variant="default" className="w-full">
+              Call Now
+            </Button>
+          </Link>
         </CardContent>
       </Card>
 
@@ -51,10 +41,14 @@ const ContactCards = () => {
             H.no. 5-4, Shankarpalli Rd, beside Q farm, near by IBS campus,
             Donthenpalle, Hyderabad, Telangana 501203, India
           </p>
-
-          <Button variant="default" className="w-full">
-            Directions
-          </Button>
+          <Link
+            href={`https://www.google.com/maps?ll=17.420017,78.229036&z=16&t=m&hl=en&gl=US&mapclient=embed&cid=5709170577501979575`}
+            target="_blank"
+          >
+            <Button variant="default" className="w-full">
+              Visit
+            </Button>
+          </Link>
         </CardContent>
       </Card>
     </div>
