@@ -22,12 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        // Method 1: Apply directly to body
-        className={`${inter.className} antialiased relative`}
-        // OR Method 2: Use as a CSS variable
-        // className={`${inter.variable} font-sans antialiased`}
-      >
+      <body className={`${inter.className} antialiased relative`}>
         <Navbar />
         {children}
         <Footer />

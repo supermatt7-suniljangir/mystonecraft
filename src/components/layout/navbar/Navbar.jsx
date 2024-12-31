@@ -8,7 +8,18 @@ import {
   NavigationMenuContent,
 } from "../../../components/ui/navigation-menu";
 import { Button } from "../../../components/ui/button";
-import { Menu, X, Home, Phone, Info, Rocket, Star, Trophy } from "lucide-react";
+import {
+  Menu,
+  X,
+  Home,
+  Phone,
+  Info,
+  Rocket,
+  Star,
+  Trophy,
+  MessagesSquare,
+  Eye,
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -36,26 +47,25 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  
+
   useEffect(() => {
-    setIsOpen(false); 
-  
+    setIsOpen(false);
   }, [currentPath]);
 
   return (
     <nav
       ref={navbarRef}
-      className="w-full bg-transparent absolute top-0 left-0 text-background z-50 md:px-4 py-1 shadow-2xl"
+      className="w-full bg-transparent absolute top-0 left-0 text-background z-50 md:px-2 py-1 shadow-2xl"
     >
       <div className="mx-auto w-full">
         <div className="flex items-center justify-between h-14 text-background w-full px-4">
-          <Link href="/" className="text-xl font-semibold">
+          <Link href="/" className="textlg font-semibold">
             Global Stone Art
           </Link>
 
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden md:block w-full">
-            <NavigationMenuList className="flex gap-8">
+            <NavigationMenuList className="flex gap-6">
               <NavigationMenuItem>
                 <Link href={"/"} className=" flex items-center gap-2">
                   <Home className="h-4 w-4" />
@@ -65,7 +75,8 @@ const Navbar = () => {
 
               {/* Dropdown Menu */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent" >
+                <NavigationMenuTrigger className="bg-transparent !p-2 flex items-center gap-2">
+                  <Eye className="h-4 w-4" />
                   Designs
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -101,7 +112,15 @@ const Navbar = () => {
                   <span>About</span>
                 </Link>
               </NavigationMenuItem>
-
+              <NavigationMenuItem>
+                <Link
+                  href={"/testimonials"}
+                  className=" flex items-center gap-2"
+                >
+                  <MessagesSquare className="h-4 w-4" />
+                  <span>Testimonials</span>
+                </Link>
+              </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link href={"/contact"} className=" flex items-center gap-2">
                   <Phone className="h-4 w-4" />
@@ -137,7 +156,7 @@ const Navbar = () => {
                 <AccordionItem value="explore" className="border-none">
                   <AccordionTrigger className="flex items-center gap-2 p-4 hover:bg-primary/10 hover:no-underline">
                     <div className="flex items-center gap-2">
-                      <Rocket className="h-5 w-5" />
+                      <Eye className="h-5 w-5" />
                       Explore
                     </div>
                   </AccordionTrigger>
@@ -176,7 +195,13 @@ const Navbar = () => {
                 <Info className="h-5 w-5" />
                 About
               </Link>
-
+              <Link
+                className="flex items-center gap-2 p-4 w-full hover:bg-primary/10"
+                href="/testimonials"
+              >
+                <MessagesSquare className="h-5 w-5" />
+                Testimonials
+              </Link>
               <Link
                 className="flex items-center gap-2 p-4 w-full hover:bg-primary/10"
                 href="/contact"
