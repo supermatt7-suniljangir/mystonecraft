@@ -71,13 +71,13 @@ import user from "../../assets/user.png";
 const HeroSection = () => {
   return (
     // check globals.css for the background image class
-    <div className="relative md:h-[95vh] p-4 w-full overflow-hidden text-primary-foreground">
+    <div className="relative md:h-[100vh] p-4 w-full overflow-hidden text-primary-foreground">
       <div className="absolute inset-0 bg-cover bg-[center_top_30%] bg-no-repeat backgroundImgTestimonials" />
       <div className="absolute inset-0 bg-black/55 z-0" />
 
-      <div className="relative flex flex-col md:flex-row items-center justify-center h-full z-10 space-y-8 md:space-y-0 pt-8">
+      <div className="relative flex flex-col  md:flex-row items-center justify-center h-full z-10 space-y-8 md:space-y-0 pt-10 pb-4">
         {/* Left Content */}
-        <Card className="w-full md:w-1/2 mx-auto bg-transparent border-none !shadow-none text-background mt-4 md:mt-0">
+        <Card className="w-full md:w-1/2 mx-auto bg-transparent border-none !shadow-none text-background mt-8 md:mt-0">
           <CardContent className="flex flex-col items-center md:items-start text-center md:text-left space-y-8">
             <div className="space-y-4">
               <div className="flex items-center justify-center md:justify-start gap-3">
