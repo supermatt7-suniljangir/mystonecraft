@@ -10,9 +10,9 @@ import image2 from "../../assets/imageCpy.jpg";
 
 const autoplayOptions = {
   delay: 3000,
-  stopOnInteraction: false, // Changed to false to continue playing after interaction
-  stopOnMouseEnter: true, // Added to pause on mouse enter
-  rootNode: (emblaRoot) => emblaRoot.parentElement, // Added to ensure proper event handling
+  stopOnInteraction: false,
+  stopOnMouseEnter: true,
+  rootNode: (emblaRoot) => emblaRoot.parentElement,
 };
 
 let carouselItems = [
@@ -45,9 +45,9 @@ export default function CarouselUI() {
     {
       loop: true,
       align: "center",
-      skipSnaps: false, // Added to ensure precise sliding
-      dragFree: false, // Added to prevent free-form dragging
-      containScroll: "trimSnaps", // Added to ensure proper snap points
+      skipSnaps: false,
+      dragFree: false,
+      containScroll: "trimSnaps",
     },
     [autoplay.current]
   );
@@ -55,14 +55,14 @@ export default function CarouselUI() {
   const scrollPrev = useCallback(() => {
     if (emblaApi) {
       emblaApi.scrollPrev();
-      autoplay.current.reset(); // Reset autoplay after manual navigation
+      autoplay.current.reset();
     }
   }, [emblaApi]);
 
   const scrollNext = useCallback(() => {
     if (emblaApi) {
       emblaApi.scrollNext();
-      autoplay.current.reset(); // Reset autoplay after manual navigation
+      autoplay.current.reset();
     }
   }, [emblaApi]);
 
@@ -75,13 +75,11 @@ export default function CarouselUI() {
       setSelectedIndex(emblaApi.selectedScrollSnap());
     });
 
-    // Clean up function
     return () => {
       autoplay.current.stop();
     };
   }, [emblaApi]);
 
-  // Handle visibility change
   React.useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.hidden) {
@@ -99,20 +97,18 @@ export default function CarouselUI() {
   }, []);
 
   return (
-    <div className="relative w-full mx-auto ">
+    <div className="relative w-full mx-auto">
       <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex touch-pan-y">
-          {" "}
-          {/* Added touch-pan-y for better mobile handling */}
+        <div className="flex">
           {carouselItems.map((item) => (
-            <div key={item.id} className="flex-[0_0_100%] md:p-4">
-              <Card className="aspect-square md:aspect-auto md:h-[95vh]">
-                <CardContent className="flex h-full w-full aspect-square relative">
+            <div key={item.id} className="flex-[0_0_100%] min-w-0 md:p-4">
+              <Card className="relative md:h-[95vh]">
+                <CardContent className="flex aspect-square md:aspect-auto h-full w-full relative">
                   <Image
                     src={item.image}
                     fill
                     className="object-cover"
-                    priority // Added priority for better loading
+                    priority
                     alt={`Carousel image ${item.id}`}
                   />
                 </CardContent>
@@ -121,14 +117,15 @@ export default function CarouselUI() {
           ))}
         </div>
       </div>
+
       <button
-        className="absolute left-1 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 items-center justify-center rounded-full bg-black/50 text-background hover:bg-black/70 transition-colors  flex"
+        className="absolute left-1 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 items-center justify-center rounded-full bg-black/50 text-background hover:bg-black/70 transition-colors flex z-10"
         onClick={scrollPrev}
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
-        className="absolute right-1 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 items-center justify-center rounded-full bg-black/50  text-background hover:bg-black/70 transition-colors  flex"
+        className="absolute right-1 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 items-center justify-center rounded-full bg-black/50 text-background hover:bg-black/70 transition-colors flex z-10"
         onClick={scrollNext}
       >
         <ChevronRight className="w-6 h-6" />
@@ -145,7 +142,7 @@ export default function CarouselUI() {
             }`}
             onClick={() => {
               emblaApi?.scrollTo(index);
-              autoplay.current.reset(); // Reset autoplay after manual navigation
+              autoplay.current.reset();
             }}
           />
         ))}
