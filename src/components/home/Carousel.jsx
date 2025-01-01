@@ -5,8 +5,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import AutoPlay from "embla-carousel-autoplay";
-import image1 from "../../assets/image.jpg";
-import image2 from "../../assets/imageCpy.jpg";
 
 const autoplayOptions = {
   delay: 3000,
@@ -14,6 +12,9 @@ const autoplayOptions = {
   stopOnMouseEnter: true,
   rootNode: (emblaRoot) => emblaRoot.parentElement,
 };
+
+const image1 = "/assets/image.jpg";
+const image2 = "/assets/imageCpy.jpg";
 
 let carouselItems = [
   {

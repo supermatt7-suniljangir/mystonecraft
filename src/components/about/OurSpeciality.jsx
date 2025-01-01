@@ -2,8 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
-import craft1 from "../../assets/craft-1.jpeg";
-import craft2 from "../../assets/craft-2.jpeg";
+
 const OurSpeciality = () => {
   return (
     <div className="md:mt-8 p-4 sm:p-8">
@@ -24,20 +23,25 @@ const OurSpeciality = () => {
 
         <div className="md:w-[45%]  w-full md:flex-col space-y-4 flex-row">
           <Image
-            src={craft1}
+            src={"/assets/craft-1.jpeg"}
             width={250}
             height={250}
             alt="Our Speciality"
             className=""
           />
           <Image
-            src={craft2}
+            src={"/assets/craft-2.jpeg"}
             width={250}
             height={250}
             alt="Our Speciality"
             className="ml-auto"
           />
-          <Image src={craft1} width={250} height={250} alt="Our Speciality" />
+          <Image
+            src={"/assets/craft-1.jpeg"}
+            width={250}
+            height={250}
+            alt="Our Speciality"
+          />
         </div>
       </div>
     </div>

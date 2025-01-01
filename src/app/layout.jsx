@@ -2,8 +2,9 @@
 import React from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/layout/navbar/Navbar";
-import Footer from "../components/layout/others/Footer";
+import Navbar from "@/components/layout/navbar/Navbar";
+import Footer from "@/components/layout/others/Footer";
+import BottomButtons from "@/components/layout/others/BottomButtons";
 
 // Initialize Inter font
 const inter = Inter({
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} antialiased relative`}>
         <Navbar />
         {children}
+        <BottomButtons />
         <Footer />
       </body>
     </html>

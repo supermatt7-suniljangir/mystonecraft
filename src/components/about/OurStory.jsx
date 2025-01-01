@@ -1,12 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import frame from "../../assets/frame.png";
-import { Card, CardContent, CardHeader } from "../ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 const OurStory = () => {
   return (
     <div className="w-full flex justify-around p-4 md:p-8 flex-col md:flex-row items-center">
       <div className="md:w-[48%] w-full h-[60vh] relative">
-        <Image src={frame} fill />
+        <Image src={"/assets/frame.png"} fill />
       </div>
 
       {/* stories container */}

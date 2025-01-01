@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import about from "../../assets/about.jpeg";
 
 const CompanyInfo = () => {
   const stats = [
@@ -13,7 +12,7 @@ const CompanyInfo = () => {
   return (
     <div className="w-full flex gap-2 justify-around p-4 md:p-8 flex-col md:flex-row-reverse items-center">
       <div className="md:w-1/2 w-full h-[60vh] relative">
-        <Image src={about} fill className="rounded-md" />
+        <Image src={"/assets/about.jpeg"} fill className="rounded-md" />
       </div>
 
       <div className="w-full md:w-1/2 mx-auto   text-center md:text-start space-y-4">

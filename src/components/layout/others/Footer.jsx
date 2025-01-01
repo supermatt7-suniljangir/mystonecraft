@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import logo from "../../../assets/user.png";
+const logo = "/assets/user.png";
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background py-16">

@@ -1,9 +1,9 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import avatar from "../../assets/user.png";
 import Image from "next/image";
 
 const Testimonials = () => {
+  const avatar = ["/assets/user.png"][0];
   const testimonials = [
     {
       name: "Someone",

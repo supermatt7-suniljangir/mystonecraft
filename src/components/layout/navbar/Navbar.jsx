@@ -6,8 +6,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuContent,
-} from "../../../components/ui/navigation-menu";
-import { Button } from "../../../components/ui/button";
+} from "@/components/ui/navigation-menu";
+import { Button } from "@/components/ui/button";
 import {
   Menu,
   X,
@@ -25,7 +25,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../../components/ui/accordion";
+} from "@/components/ui/accordion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

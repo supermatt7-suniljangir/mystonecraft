@@ -1,6 +1,6 @@
 import React from "react";
-import HeroSection from "../../../components/testimonials/HeroSection";
-import CarouselUI from "../../../components/testimonials/Carousel";
+import HeroSection from "@/components/testimonials/HeroSection";
+import CarouselUI from "@/components/testimonials/Carousel";
 
 const Testimonials = () => {
   return (

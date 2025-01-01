@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 .backgroundImgHome {
-  background-image: url("../assets/bg.jpeg") !important;
+  background-image: url("/assets/bg.jpeg") !important;
 }
 .backgroundImgContact {
-  background-image: url("../assets/bg.jpeg") !important;
+  background-image: url("/assets/bg.jpeg") !important;
 }
 .backgroundImgAbout {
-  background-image: url("../assets/about.jpeg") !important;
+  background-image: url("/assets/about.jpeg") !important;
 }
 .backgroundImgTestimonials {
-  background-image: url("../assets/bg.jpeg") !important;
+  background-image: url("/assets/bg.jpeg") !important;
 }
 
 body {
