@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowBigLeft } from "lucide-react";
 import HeroSection from "@/components/catalogue/HeroSection";
+import Products from "@/components/catalogue/Products";
 
 const CategoryDetails = async ({ params }) => {
   const { category } = (await params) || {};
@@ -35,6 +36,7 @@ const CategoryDetails = async ({ params }) => {
   return (
     <div>
       <HeroSection category={categoryData} />
+      <Products products={categoryData.media}/>
     </div>
   );
 };

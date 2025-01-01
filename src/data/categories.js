@@ -14,6 +14,66 @@ const marbleGlassMedia = [
     range: "₹600 - ₹900 per sq. ft.",
     description: "Vibrant green marble with a unique, forest-like texture.",
   },
+  {
+    id: 3,
+    name: "Emperador Dark Marble",
+    image: "/assets/craft-1.jpeg",
+    range: "₹400 - ₹600 per sq. ft.",
+    description:
+      "Rich brown marble with intricate light veins, perfect for walls and flooring.",
+  },
+  {
+    id: 4,
+    name: "Green Guatemala Marble",
+    image: "/assets/craft-2.jpeg",
+    range: "₹600 - ₹900 per sq. ft.",
+    description: "Vibrant green marble with a unique, forest-like texture.",
+  },
+  {
+    id: 5,
+    name: "Emperador Dark Marble",
+    image: "/assets/craft-1.jpeg",
+    range: "₹400 - ₹600 per sq. ft.",
+    description:
+      "Rich brown marble with intricate light veins, perfect for walls and flooring.",
+  },
+  {
+    id: 6,
+    name: "Green Guatemala Marble",
+    image: "/assets/craft-2.jpeg",
+    range: "₹600 - ₹900 per sq. ft.",
+    description: "Vibrant green marble with a unique, forest-like texture.",
+  },
+  {
+    id: 7,
+    name: "Emperador Dark Marble",
+    image: "/assets/craft-1.jpeg",
+    range: "₹400 - ₹600 per sq. ft.",
+    description:
+      "Rich brown marble with intricate light veins, perfect for walls and flooring.",
+  },
+  {
+    id: 8,
+    name: "Green Guatemala Marble",
+    image: "/assets/craft-2.jpeg",
+    range: "₹600 - ₹900 per sq. ft.",
+    description: "Vibrant green marble with a unique, forest-like texture.",
+  },
+  {
+    id: 9,
+    name: "Emperador Dark Marble",
+    image: "/assets/craft-1.jpeg",
+    range: "₹400 - ₹600 per sq. ft.",
+    description:
+      "Rich brown marble with intricate light veins, perfect for walls and flooring.",
+  },
+  {
+    id: 10,
+    name: "Green Guatemala Marble",
+    image: "/assets/craft-2.jpeg",
+    range: "₹600 - ₹900 per sq. ft.",
+    description: "Vibrant green marble with a unique, forest-like texture.",
+  },
 ];
 
 const luxuryWhiteMedia = [
