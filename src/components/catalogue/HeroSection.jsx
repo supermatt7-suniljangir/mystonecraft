@@ -23,10 +23,10 @@ const HeroSection = ({ category }) => {
         }}
       />
       <div className="absolute inset-0 bg-black/60" />
-      <div className=" flex h-full flex-col md:flex-row md:flex-start items-center justify-around mt-24 py-10 md:mt-0 md:py-0">
+      <div className="flex h-full w-full flex-col md:flex-row md:flex-start items-center justify-around mt-24 py-10 md:mt-0 md:py-0">
         <Card className="relative w-full  md:w-1/2 mx-auto bg-transparent border-none shadow-none text-background">
           <CardContent className="flex flex-col items-center text-center md:text-start justify-center space-y-8">
-            <div className="space-y-3">
+            <div className="space-y-3 w-full">
               <h1 className="text-4xl lg:text-5xl font-extrabold !leading-tight capitalize">
                 Explore {category.category.split("-").join(" ")}
               </h1>
@@ -72,7 +72,7 @@ const HeroSection = ({ category }) => {
               objectFit="cover"
             />
           </div>
-          <div className="relative md:w-60 w-1/3 sm:h-28 md:h-36 h-24 md:ml-[10rem] mt-8 md:mt-0">
+          <div className="relative md:w-60 w-1/3 sm:h-28 md:h-36 h-24 md:ml-[10rem] xl:ml-[20rem] mt-8 md:mt-0">
             <Image
               fill
               src={category.media[1].image}

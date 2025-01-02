@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} antialiased relative`}>
         <Navbar />
         {children}
-        <BottomButtons />
+          <BottomButtons className="bg-background p-4 h-20 z-50 w-full sticky bottom-0 left-0 items-center" />
         <Footer />
       </body>
     </html>

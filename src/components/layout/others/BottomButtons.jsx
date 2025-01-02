@@ -5,7 +5,7 @@ import { Milestone, Phone } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-const BottomButtons = ({className}) => {
+const BottomButtons = ({ className }) => {
   return (
     <div className={cn("flex gap-8 justify-center py-10", className)}>
       <Link
@@ -24,7 +24,7 @@ const BottomButtons = ({className}) => {
           variant="secondary"
           className="bg-foreground w-32 rounded-none text-background hover:text-primary"
         >
-          <Phone className=" h-2 w-2" />
+          <Phone className="h-2 w-2" />
           Call Us
         </Button>
       </a>
